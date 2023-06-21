@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My HTML Page</title>
+  </head>
+  <body>
+    <h1 id="header">Hello World</h1>
+    <button onclick="changeText()">Click me</button>
+    <ul id="list"></ul>
+    <textarea id="text"></textarea>
+    <button onclick="addToList()">Add to list</button>
+    <script>
+      function changeText() {
+        document.getElementById("header").innerHTML = "My notebook";
+        console.log("hello world");
+      }
+      function addToList() {
+        var listItem = document.createElement("li");
+        var text = document.getElementById("text").value;
+        var itemText = document.createTextNode(text);
+        listItem.appendChild(itemText);
+        document.getElementById("list").appendChild(listItem);
+      }
+    </script>
+  </body>
+</html>
